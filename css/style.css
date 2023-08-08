@@ -1,0 +1,35 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Alata', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.header{
+    background-image: url(../images/mobile/image-hero.jpg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 680px;
+    color: white;
+    background-color: black;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px 0;
+}
+
+.navBar{
+    display: none;
+}
