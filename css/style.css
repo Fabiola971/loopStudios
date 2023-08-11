@@ -31,6 +31,11 @@ h2{
     height: 680px;
     background-color: black;
     padding: 22px;
+    /* width: 100%; */
+}
+
+.iconHamburger{
+    margin-top: 17px;
 }
 
 .navigation{
@@ -40,12 +45,46 @@ h2{
 }
 
 .navBar{
-    display: none;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 375px;
+    padding: 30px 22px;
+    
 }
 
-.logo p{
-    font-size:x-large;
+.navBar1{
+    display: none;   
 }
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;   
+}
+
+.logo img{
+    margin-bottom: 4px;
+}
+
+.logo p, footer h3{
+    font-size:xx-large;
+}
+
+.navBar li{
+    margin: 20px auto;
+    font-size: 15px;
+    letter-spacing: .1rem;
+    
+}
+
+.navBar ul{
+   
+    margin: 150px auto 240px auto
+}
+
+
 
 .titlePrincipal{
     border: 2px solid #fff;
@@ -90,11 +129,78 @@ h2{
 }
 /* *****************************************SECTION TWO ******************* */
 .two h2{
-    color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 0%)
+}
+
+.grid{
+    display: grid;
+    gap: 22px;
+    padding:  22px;
+}
+
+.grid button{
+    
+    text-transform: uppercase;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border: #000 1px solid;
+    background-color: inherit;
+    padding: 15px 50px;
+    margin-left: 22%;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    margin-right: auto;
+}
+
+.grid img{
+    width: 100%;
 }
 
 /* ********************************** FOOTER*********************** */
 
 footer{
     background-color: #000;
+    padding: 60px 50px;
+}
+
+footer li, .menu li{
+    list-style-type: none;
+}
+
+footer p{
+    color: hsl(0, 0%, 55%);
+    font-size: 15px;
+}
+
+.linkNavBar ul{
+    padding: 20px;
+}
+
+.linkNavBar li{
+    padding: 8px;
+}
+
+.linkNavBar li:nth-of-type(2n){
+    padding-left: 0px;
+}
+
+.linkNavBar li:last-of-type{
+    padding-left: 2px;
+}
+
+.socialNetwork, .linkNavBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.linkSocialNetwork{
+    padding: 10px;
+}
+
+.linkSocialNetwork img{
+    padding: 5px;
 }
