@@ -29,6 +29,7 @@ h2{
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     height: 680px;
+    /* height: 1080px; */
     background-color: black;
     padding: 22px;
     /* width: 100%; */
@@ -48,7 +49,8 @@ h2{
     background-color: #000;
     position: absolute;
     top: 0;
-    left: 0;
+    /* left: 0; */
+    right: 0;
     width: 375px;
     padding: 30px 22px;
     
@@ -58,7 +60,7 @@ h2{
     display: none;   
 }
 
-.logo{
+.logo, .logo1{
     display: flex;
     justify-content: space-between;
     align-items:flex-end;   
@@ -68,7 +70,7 @@ h2{
     margin-bottom: 4px;
 }
 
-.logo p, footer h3{
+.logo p, .logo1, footer h3{
     font-size:xx-large;
 }
 
@@ -139,7 +141,6 @@ h2{
 }
 
 .grid button{
-    
     text-transform: uppercase;
     border-radius: 0;
     -webkit-border-radius: 0;
@@ -204,3 +205,58 @@ footer p{
 .linkSocialNetwork img{
     padding: 5px;
 }
+
+/* ********************************MEDIA QUERIES******************************* */
+@media (min-width: 412px) /*and (max-width: 542px)*/{
+    .imageInteractive{
+        /* min-height: 500px; */
+    }
+ }
+
+
+@media (min-width: 442px) and (max-width: 542px){
+   .header{
+        min-height: 800px;
+   } 
+}
+
+@media (min-width: 543px) and (max-width: 1199px){
+    .header{
+        min-height: 1000px;
+        max-height: 1800px;
+    } 
+ }
+
+ @media (min-width: 1200px) {
+    .header{
+        background: url(../images/desktop/image-hero.jpg) no-repeat;
+        background-size: cover;
+        min-height: 800px;
+        padding-left: 200px;
+        padding-top: 42px;
+    }
+
+    .navBar{
+        background-color: inherit;
+        display: flex;
+    }
+
+    .navBar ul{
+        display: flex;
+        text-transform: lowercase;    
+    }
+
+    .navBar ul li::first-letter{
+        text-transform: uppercase;
+    }
+
+    .logo, .iconHamburger{
+        display: none;
+    }
+
+    .titlePrincipal{
+        width: 650px;
+        line-height: 62px;
+        font-size: 2em;
+    }
+ }
