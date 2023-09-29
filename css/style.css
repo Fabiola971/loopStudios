@@ -13,15 +13,20 @@ a{
     text-decoration: none;
 }
 
-a:after, li:after{
+a::after, footer .linkSocialNetwork a::after{
     content: " ";
-
+    display: block;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 27%;
 }
 
-a:hover, li:hover{
-    text-decoration: underline;
+a:hover::after{
+    top: 100%;
+    width: 25px;
 }
-
 
 body{
     font-family: 'Alata', sans-serif;
@@ -35,6 +40,16 @@ h2{
     text-align: center;
 }
 
+li{
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+}
+
+main{
+    margin-bottom: 58px;
+}
+
 /* ******************************Header************************ */
 header{
     background-image: url(../images/mobile/image-hero.jpg);
@@ -42,11 +57,8 @@ header{
     background-position: center center;
     background-repeat: no-repeat;
     height: 680px;
-    /* height: 1080px; */
     background-color: black;
     padding: 22px;
-    /* width: 100%; */
-    border: 5px solid black;
 }
 
 .iconHamburger{
@@ -96,8 +108,6 @@ header{
    margin: 150px auto 240px auto
 }
 
-
-
 .titlePrincipal{
     border: 2px solid #fff;
     padding: 20px;
@@ -137,6 +147,10 @@ header{
     color: #000;
 }
 /* *****************************************SECTION TWO ******************* */
+.contentGrid{
+    position: relative;
+}
+
 .two h2{
     color: hsl(0, 0%, 0%);
     margin-bottom: 20px;
@@ -173,63 +187,19 @@ header{
 .grid img{
     width: 100%;
     height: 100%;
-    /* width: max-content; */
 }
 
 .grid p{
     text-transform: uppercase;
-    font-size: 34px;
+    font-size: 26px;
     text-align: left;  
 }
 
-.grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8{
+.gridText{
     position: absolute;
     margin-left: 6%;
+    bottom: 18px;
 } 
-
-.grid1{
-   margin-top: 9.2%;  
-}
-
-.grid2{
-    top: 21%;
-    bottom: auto;
-}
-
-.grid3{
-   top: 31.8%;
-   bottom: auto;
-}
-
-.grid4{
-    top: 43%;
-    bottom: auto;
-}
-
-.grid5{
-   top: 54%;
-   bottom: auto;
-}
-
-.grid6{
-    top: 64.8%;
-    bottom: auto;
-}
-
-.grid7{
-   top: 76%;
-   bottom: auto;
-}
-
-.grid8{
-    top: 87%;
-    bottom: auto;
-}
-
-.gridOne, .gridTwo, .gridThree, .gridFour, .gridFive, .gridSix, .gridSeven, .gridEight{
-    /* width: max-content; */
-    /* width: 100%; */
-}
 
 /* ********************************** FOOTER*********************** */
 
@@ -293,6 +263,20 @@ footer p{
  }
 
  @media (min-width: 1286px) {
+    a:hover::after{
+        margin-top: 5px;
+    }
+
+    footer a:hover::after, footer .linkSocialNetwork a:hover::after{
+        top: 80%;
+        left: 35%;    
+    }
+    
+    footer .linkAbout:hover::after{
+        left: 10px;
+    
+    }
+
     header{
         background: url(../images/desktop/image-hero.jpg) no-repeat;
         background-size: cover;
@@ -300,7 +284,6 @@ footer p{
         padding: 42px 13% 22px 13%;
     }
     
-
     .containerOne{
         display: grid;
         grid-template-columns: 700px auto;
@@ -348,11 +331,7 @@ footer p{
         font-size: 44px;
     }
 
-    
     .grid p{
-        /* position: absolute; */
-        /* display: flex; */
-        /* flex-direction: column; */
         text-transform: uppercase;
         font-size: 34px;   
     }
@@ -360,12 +339,6 @@ footer p{
     .gridOne{
         content: url(../images/desktop/image-deep-earth.jpg);
         grid-row: 2 /3;
-    }
-
-    .grid1{
-        position:absolute;
-        top: 150px;
-        text-align: center;
     }
 
     .gridTwo{
@@ -504,3 +477,4 @@ footer p{
         margin: 10px -55%;    
     }
  }
+ 
